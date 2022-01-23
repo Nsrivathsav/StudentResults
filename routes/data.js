@@ -10,7 +10,6 @@ dataRouter.post('/upload', function (req, res) {
         var data=[];
         req.query.data.forEach(record => {
             record=JSON.parse(record);
-           // data.push(record);
             var studentRecord={};
             studentRecord.filter={id:record.ID};
             studentRecord.upsert=true;
